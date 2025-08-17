@@ -1,0 +1,690 @@
+                         
+@font-face { font-family: "RDR Lino"; src: url(fonts/rdolino.ttf); }
+
+
+body {
+    font-family: "RDR Lino";
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    z-index: 999;
+    min-width: 0;
+}
+
+* {
+    user-select: none;
+    /* transition: all 0.3s; */
+}
+
+div {
+    display: block;
+}
+
+.scroll-container::-webkit-scrollbar {
+   display: none;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(77 70 70);
+    box-shadow: inset 0 0 6px rgb(77 70 70);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    outline: 1px solid #fefbfb;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    /* border: 0 !important; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none !important;
+}
+
+input[type=number]:active {
+    border-bottom-color: rgba(45, 146, 235, 0.9) !important;
+}
+
+button {
+    color:white;
+    border:0px;
+}
+
+
+
+.buy-buttons {
+  display:grid;
+  margin-top: -10px
+}
+
+
+.spacing2 {
+    margin-bottom: 100px;
+
+}
+
+.spacing10 {
+    margin-bottom: 100px;
+}
+
+.border-top {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(241 227 227);
+    text-align: right;
+}
+
+#head {
+    margin: 10 rem;
+    min-width: 420px;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+
+
+.header-text {
+    position: relative;
+    margin-top:49px;
+    font-size: 49px;
+    color: #ffffff;
+    font-family: "RDR Lino";
+    text-align: center;
+}
+
+
+
+
+
+
+#clothes-container,
+#creator-container,
+#barber-container,
+#tats-container {
+    padding-bottom: 100px;
+    overflow: hidden;
+    position: absolute;
+    height: 80%;
+    left: 3%;
+    top: 5%;
+    width: 580px;
+    color: #f6f6f6 !important;
+    background: url('img/bgPanel.png');
+    background-size: 100% 100%;
+}
+
+.scroll-container {
+
+    padding: 15px !important;
+    margin: 1px  !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 408px);
+    width: 100%;
+
+
+}
+/*------- menu buttons */
+#button_menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 25px 39px;
+    height: 1vh;
+
+
+}
+
+.menu-selectb {
+    flex-grow: 1;
+    border-radius: 0px;
+    margin-top: -10px;
+    height: 5vh;
+    border: 0px #fff solid;
+    font-family: "RDR Lino";
+    font-size: 20px;
+    color: #3a3737;
+  
+  
+}
+
+
+.menu-selectb:hover {
+    color: white!important;
+   
+}
+
+.menu-selectb.active {
+    color: #ffffff!important;
+   
+}
+/*--------------------------------------------*/
+
+
+
+
+.input-number,
+.input-text {
+    text-align: center;
+    background-image: url('img/input.png') !important;
+    
+}
+
+
+.panel {
+    padding: 0px !important;
+    margin: 5px 2px !important;
+    border-radius: 5px;
+    width: calc(100% - 80px) !important;
+    overflow: hidden;
+    background-color:transparent;
+   
+}
+
+/* TACK*/
+.panel1 {
+    margin: 20px 35px !important;
+    width: calc(100% - 70px) !important;
+    color:white;
+    background-color:transparent;
+}
+
+.title {
+  font-size: 1.3em;
+  border-radius: 2px;
+  font-family: "RDR Lino";
+  color: #ffffff0f;
+
+}
+ 
+/* cart price*/
+.horse-price3{
+   text-align:center;
+   margin-top:30px;
+    font-size: 1.5em;
+    color:#ffffff;
+    font-family: "RDR Lino"; 
+    text-decoration:underline overline white; 
+}
+/* horse price*/
+.horse-price2{
+   text-align:center;
+   margin-top:30px; 
+   font-size: 1.5em;
+   color: white;
+   font-family: "RDR Lino";
+   text-decoration:underline overline #ffffff;
+   
+} 
+/* money horse and wagon*/
+.horse-price{
+   text-align:center;
+   margin-top: 9px; 
+   margin-left:10px;
+   font-size: 1.5em;
+   color:#bfa341;
+   font-family: "RDR Lino";
+}
+
+.weight{
+    color:#bfa341;
+    font-size:15px;
+    margin-top:0px;
+    margin-left: 20px;
+    
+}
+
+.logo{
+    margin-top:-100px;
+    margin-left:400px;
+  
+}
+/*-------------------------------------------- wagon and horse name category ------------*/
+
+.panel-title {
+    font-size: 1.5em;
+    color:#ffffff;
+    font-family: "RDR Lino";
+    background-color:#08080845;
+    font-weight: bold;
+}
+
+.panel-title:hover {
+    font-size: 1.5em;
+    color:#fff9f9;
+    font-family: "RDR Lino";
+    background-color:#0000000a;
+      
+
+}
+/*---------------- select horse -------------*/
+.panel-title1 {
+   
+    font-family: "RDR Lino";
+    background-color:#1b1b1b21;
+    height:220px;
+    border-radius: 10px;
+    margin: 2px;
+   
+}
+
+.panel-title1:hover {
+   background-color:#020202;
+   
+ 
+
+}
+
+/*--------------------horse breed name---------*/
+.grey-text {
+    font-family: "RDr Lino"; /* horse name*/
+    font-size: 1.5em;
+    text-align: center;
+   /* background-color:#eaeaea;*/
+   color: white!important;
+   text-decoration: none;
+    padding: 1px 1px 1px 1px ;
+    
+}
+
+.grey-text:hover {
+   /* font-family: "RDr Lino";
+    font-size: 1.5em;
+    text-align: center;
+    background-color:#eaeaea;*/
+   color: #ffffff!important;
+   text-decoration: underline;
+   cursor: pointer;
+    padding: 1px 1px 1px 1px ;
+    
+}
+
+.imgoverlay {
+    background-color: transparent;
+    border: 0;
+    height:64px;
+}
+.imgoverlay:hover {
+    
+    cursor: pointer;
+}
+/*-------------- horse sale category--------------*/
+.panel-title .grey-text {
+    background: none ;
+   /* background-image: url(img/input.png);*/
+    background-size:100% 100%;
+    padding: 20px 1px !important;
+    font-size: 1.5em;  
+     
+} 
+.panel-title .grey-text:hover {
+    background: none ;
+    border:1px solid #ffffff00;
+    border-radius: 8px;
+    padding: 20px 1px !important; 
+    font-size: 1.5em; 
+        
+} 
+/*----------------------- horse select name ----------------------------*/
+.panel-title1 .grey-text1 {
+    background-color:none ;
+    background-size: 70% 70%;
+    padding: 90px 0px !important;
+    font-size: 1.0em;
+    color:grey; 
+            
+} 
+
+.panel-title1 .grey-text1:hover {
+     color:white;
+
+
+}
+
+/*------------------------------------------------------------------*/
+.grey-tex{   /*icon*/
+  text-align:center;
+}
+
+
+
+
+#clothes,
+#creator {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+
+/*         arrows----------------------------------------------------------*/
+.button-left{
+	height:40px !important;
+}
+
+.button-right{
+	height:40px !important;
+}
+
+
+
+/*---------------------- horse sale----------------------*/
+.item {
+    position:relative;
+    padding: 0% 20px!important;
+    margin-top: 20px;
+    height: 200px;
+}
+
+.item3 {
+    height:150px;   
+ 
+}
+
+
+.item:hover{
+ /* margin-top: 60px;*/
+ 
+  
+}
+/*-----------------------------wagon sale -----------------------------*/
+.item2 {
+    position:relative;
+    height:250px; 
+    padding: 1% 20px!important;
+    margin-top: 5px;
+   
+}
+
+.item2:hover{
+  margin-top:-0px;
+  
+}
+
+/*------------------horse select sell-------------------------*/
+.grey-textinfo{   
+   font-family: "RDr Lino"; 
+    font-size: 1.2em;
+    text-align: center;
+    background-color:#f5f0f0;
+    padding: 1px 1px 1px 1px ;
+    border-radius:5px;
+    
+}
+
+.itemsell {
+    margin-left: -1px;
+    padding: 2px 50px!important;
+    width: 450px;
+    border-radius:30px;
+    background-repeat:no-repeat;
+}
+
+.itemsell:hover{
+  margin-top: 5px;
+ 
+}
+/*--------------------------------------------*/
+
+
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+.waves-light {
+    padding: 15px 10px!important;
+}
+ 
+.horseStats {
+    position: absolute;
+    top: 500px;
+    right: 100px;
+    background-size: 100px 100px;
+   
+} 
+ 
+.btn,
+.btn-large,
+.btn-small {
+   
+    display:flex !important;
+    flex-direction: row!important;
+    color: white;
+    margin-top:0px;
+    height:10px;
+}
+
+.btn:active {
+    user-select: none;
+  
+
+}
+
+.btn:hover {
+   /*   border: 4px solid white;
+     border-radius: 5px; confimr and close*/
+    
+   
+}
+/*-------------------------------------------- icons hover -----------*/
+.btn-small:hover {
+    /*margin-left: 10px*/
+    color: #ffffff;
+    text-decoration: underline;
+}
+/*--------------------------------------------------------------*/
+.confirm{
+    width: 350px;
+    text-align: -webkit-center;
+    margin-left:-60px
+} 
+
+.confirm-button{
+    height: 2px;
+    width: 30%;
+    font-family: "RDR Lino";
+    margin-top: 40px;
+   
+
+}
+
+.confirm-button:hover{
+   
+    background-size: 100% 100% !important; 
+    color:#ffffff;
+    text-decoration: underline;
+    
+}
+
+button {
+    outline: none !important;
+    background-color: #ffffff00 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.rotate{
+  width: 350px;
+  text-align: -webkit-center;
+   font-family: "RDR Lino";
+
+}
+
+.rotate-button{
+    height: 37px;
+    width: 30%;
+    margin-left:438px;
+    margin-top: -35px;
+    font-family: "RDR Lino";
+
+    
+}
+
+.rotate-button:hover{
+  color:#ffffff;
+  text-decoration: underline;
+   
+}
+
+
+
+.close-button{
+    font-family: "RDR Lino";
+    margin-top: 60px;
+    margin-left: 300px;
+    display: none;
+
+}
+
+.close-button:hover{
+    color:#ffffff;
+    text-decoration: underline;  
+}
+
+.collapsible-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+
+
+
+/*-------------------------------------------- input TACK-----*/
+input {
+    border: 0p solid  !important;
+ 
+}
+
+input[type='text'],
+input[type='number'] {
+    font-family: "RDR Lino";
+    color: white;
+    background-size: 100% 100%;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+    color: #ffffff;
+}
+
+input[type='text']:hover,
+input[type='number']:hover {
+    color: #f4f4f4;
+}
+
+input[type='text']::-webkit-input-placeholder,
+input[type='number']::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+input[type='text']:-webkit-autofill,
+input[type='number']:-webkit-autofill {
+    color: black !important;
+    background-color: transparent !important;
+}
+
+button {
+    outline: none !important;
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.collapsible-body {
+    border: 0px !important;
+}
+
+.collapsible {
+    border: 0px !important;
+}
+
+.collapsible li {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.priceTable {
+    border: 0;
+}
+
+.priceTable td {
+    padding: 0.25rem;
+    text-align: center;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+@media (max-width:1920px){
+
+.header-text {
+    margin-top:30px;  
+}
+
+
+.confirm-button{
+    margin-top: 30px;
+}
+
+.close-button{
+    margin-top: 10px;
+
+}
+
+
+
+.scroll-container {
+ height: calc(100% - 330px);
+
+  
+}
+
+ 
+.horseStats {
+    width:500px;
+} 
+
+
+
+}

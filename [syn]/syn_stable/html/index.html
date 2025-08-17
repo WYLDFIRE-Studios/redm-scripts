@@ -1,0 +1,324 @@
+<html>
+
+<head>
+    <link href="//db.onlinewebfonts.com/c/ab21a97b9cae2e116d8d1473baefc9f0?family=RDR+Lino" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="scripts/materialize/materialize.min.css" />
+    <link rel="stylesheet" href="scripts/jquery-ui/jquery-ui.min.css">
+</head>
+
+<body>
+    <div class="confirmHorsePurchaseSex" id="purchaseDialogSex" title="Confirmation Required">
+        choose the SEX type?
+    </div>
+    <div class="confirmHorsePurchase" id="purchaseDialog" title="Confirmation Required">
+        Are you sure you want to purchase this horse?
+    </div>
+    <div class="confirmSale" id="saleDialog" title="Confirmation Required">
+        Are you sure you want to sell?
+    </div>
+
+    <div class="confirmWagonPurchase" id="purchaseDialogWagon" title="Confirmation Required">
+        Are you sure you want to purchase this Wagon?
+    </div>
+    <img class="horseStats" />
+    <div class="container">
+        <div id="creatormenu" style="display: block" class="row">
+            <div id="creator-container" class="col s5">
+                <div id="head">
+                    <div class="header-text">Stable</div>
+                  
+                </div>
+              
+                <div id="button_menu" class="row">
+                    <button id="button-myhorses" data-target="page_myhorses" class="menu-selectb active">Stable</button>
+                    <button id="button-mywagons" data-target="page_mywagons" class="menu-selectb" >Wagons</button>
+                    <button id="button-shop" data-target="page_shop" class="menu-selectb">Store</button>
+                    <button id="button-wagon" data-target="page_wagon" class="menu-selectb">Vehicles</button>
+                    <button id="button-customization" data-target="page_customization" class="menu-selectb">Tack</button>
+                </div>
+                <div class='spacing2'></div>
+                <div id="page_myhorses" class="row">
+                    <div class="scroll-container">
+                        <ul class="collapsible">
+                        </ul>
+                    </div>
+                </div>
+                <div id="page_mywagons" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <ul class="collapsible">
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="page_shop" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <ul class="collapsible">
+                            <li> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+
+                <div id="page_wagon" class="row" style="display: none;">
+                    <div class="scroll-container">
+                        <ul class="collapsible">
+                            <li> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="page_customization" class="row" style="display:none">
+                    <div class="scroll-container">
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3"> <!-- namew-->
+                                <img src="img/saddlecloth.png" alt="horse">
+                                <span>Cloth</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6> 
+                                
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;"> <!-- fontawsome icon arrow-->
+                                </button>
+                                <input id="Saddlecloths" class="input-number col s4" type="number" value="0" min="0" max="65" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/saddle.png" alt="horse">
+                                <span>Saddles</span>
+                                <h6 class="grey-text title" style="color:black;" ></h6>
+                                
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4  btn"> 
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Saddles" class="input-number col s4" type="number" value="0" min="0" max="125" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/stirrups.png" alt="horse">
+                                <span>Stirrups</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Stirrups" class="input-number col s4" type="number" value="0" min="0" max="65" />
+                                <button class="button-right col s4  btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/acsHorn.png" alt="horse">
+                                <span>AcsHorns</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="AcsHorn" class="input-number col s4" type="number" value="0" min="0" max="15" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/bags.png" alt="horse">
+                                <span>Bags</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Bags" class="input-number col s4" type="number" value="0" min="0" max="24" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/tail.png" alt="horse">
+                                <span>Tail</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="HorseTails" class="input-number col s4" type="number" value="0" min="0" max="85" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/manes.png" alt="horse">
+                                <span>Manes</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Manes" class="input-number col s4" type="number" value="0" min="0" max="101" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                            
+                        </div>   
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/acsluggage.png" alt="horse">
+                                <span>BedRolls</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="AcsLuggage" class="input-number col s4" type="number" value="0" min="0" max="29" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div>  
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/lantern.png" alt="horse">
+                                <span>Lantern</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                                
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Lantern" class="input-number col s4" type="number" value="0" min="0" max="1" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/horse3.png" alt="horse">
+                                <span>Mask</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6>
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Mask" class="input-number col s4" type="number" value="0" min="0" max="39" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div>  
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/tail.png" alt="horse">
+                                <span>Mustache</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6> 
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Mustache" class="input-number col s4" type="number" value="0" min="0" max="15" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/bridles.png" alt="horse">
+                                <span>Bridles</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6> 
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Horsebridles" class="input-number col s4" type="number" value="0" min="0" max="23" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div>
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/holster.png" alt="horse">
+                                <span>Holster</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6> 
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Horseholster" class="input-number col s4" type="number" value="0" min="0" max="1" />
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div> 
+                        <div class="col s12 panel1 item3">
+                            <div class="col s6 panel-col item3">
+                                <img src="img/shoe.png" alt="horse">
+                                <span>shoes</span>
+                                 <h6 class="grey-text title" style="color:black;" ></h6> 
+                            </div>
+                            <div class="col s6 panel-col">
+                                <button class="button-left col s4 btn">
+                                    <img src="img/arrowl.png" alt="Left Arrow" style="width: 20px;">
+                                </button>
+                                <input id="Horseshoes" class="input-number col s4" type="number" value="0" min="0" max="1"/>
+                                <button class="button-right col s4 btn">
+                                    <img src="img/arrowr.png" alt="Right Arrow" style="width: 20px;">
+                                </button>
+                            </div>                            
+                        </div> 
+                    </div>                   
+                </div>
+
+                <div class="confirm">
+                    <button id="confirm" class="confirm-button btn" onclick="Close(true)"><span>Confirm/Close</span></button>
+                    <button id="rotate" class="rotate-button btn2" onclick="rotate()"><span>Rotate</span></button>
+                    <button id="close" class="close-button btn3" onclick="applycomps()"><span>Apply Comps</span></button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts/jquery-ui/external/jquery/jquery.js"></script>
+    <script src="scripts/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="scripts/materialize/materialize.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

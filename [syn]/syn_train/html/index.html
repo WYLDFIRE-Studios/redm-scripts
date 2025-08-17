@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body >
+        <div class="container">
+            <div id="container-esc" style="display: show;">
+                <button id="esc" type="button">X</button>
+                <button id="back" type="button" style="display: none;">⬅</button>
+                <button id="buy" type="button" style="display: none;">$</button>
+                <button id="spawn" type="button" style="display: none;">Select</button>
+                <button id="spawn2" type="button" style="display: none;">Start Mission</button>
+                <button id="direct1" type="button" style="display: none;"></button>
+            </div>
+            <div id="container-landing" style="display: show;">  <!-- display: none -->
+                <h3 id = "landingtitle"></h3> 
+                <button id="viewselection" type="button">View Selection</button>
+                <button id="ownedtrains" type="button">Owned Trains</button>
+                <button id="trainkey" type="button">Train Key $ 10</button>
+                <button id="mission" type="button">Start Delivery</button>
+            </div>
+            <div id="container-list" style="display: none;">
+                <div class="grid-container">
+                </div>
+                <h3 id = "trainname" style="display: none;"></h3> 
+                <h3 id = "topspeed" style="display: none;"></h3> 
+                <h3 id = "coalconsumption" style="display: none;"></h3> 
+                <h3 id = "coalcap" style="display: none;"></h3> 
+                <h3 id = "price" style="display: none;"></h3> 
+                <img id="theimage" src="img/buttonz.png" style="display: none;" >
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+

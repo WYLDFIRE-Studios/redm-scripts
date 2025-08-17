@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syn Mail</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="mailEmojiContainer">
+        <span id="mailEmoji">✉️</span>
+        <div id="unreadMailIndicator" class="unread-indicator"></div>
+    </div>
+    <div id="mainContainer"> 
+        <div id="overlay" style="display:none;"></div>
+        <div id="appContainer">
+            <header>
+                <div id="titleContainer">
+                    <h1>Syn Mail</h1>
+                </div>
+                <!-- <div id="accountContainer">
+                    <button id="accountBtn">Account ▼</button>
+                </div> -->
+            </header>
+            <nav>
+                <button id="addressBookBtn">Address Book</button>
+                <button id="foldersBtn">Mail Folders</button>
+                <button id="sendLetterBtn">Send Letter</button> <!-- Add this line -->
+                <div class="inbox-container">
+                    <button id="inboxBtn">Inbox</button>
+                    <span class="notification-dot" id="unreadCount"></span>
+                </div>
+            </nav>
+
+            <div id="contentContainer">
+                <!-- Content will be loaded dynamically here based on navigation -->
+            </div>
+            <footer>
+                <p>Neither snow nor rain nor heat nor gloom of night stays these couriers from the swift completion of their appointed rounds</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

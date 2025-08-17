@@ -1,0 +1,290 @@
+.container{
+background-image: url("img/background.png");
+width: 100%;
+height: 100%;
+background-position: 50% 50%;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+position: absolute;
+top: 0%;
+left: 0%;
+}
+
+#landing, #list, #esc{
+width: 16vw;
+position: absolute;
+top: 15vw;
+left: 50%;
+height: 2vh;
+border: 1px solid black;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  margin-left: 60%;
+  margin-top: 10%;
+  padding: 2px;
+  height: 27vw;
+  width: 30%;
+  overflow:auto;
+  overflow-y: scroll;
+  float: left; 
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.grid-container > div {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+#landingtitle {
+  margin-left: 10vw;
+  margin-top: 5vw;
+  font-size: 200%;
+
+}
+
+#trainname {
+  margin-left: -80%;
+  margin-top: 5%;
+  font-size: 200%;
+  float: left; 
+}
+#esc {
+  width: 3%;
+  height: 5vh;
+  margin-top: -10%;
+  margin-left: 32%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+}
+#buy {
+  width: 5%;
+  height: 5vh;
+  margin-top: 47%;
+  margin-left: 73%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 200%;
+  text-align: center;
+  position: fixed;
+}
+#spawn {
+  width: 5%;
+  height: 5vh;
+  margin-top: 47%;
+  margin-left: 73%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 120%;
+  text-align: center;
+  position: fixed;
+}
+#spawn2 {
+  width: 5%;
+  height: 5vh;
+  margin-top: 47%;
+  margin-left: 73%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 120%;
+  text-align: center;
+  position: fixed;
+}
+#direct1 {
+  width: 5%;
+  height: 5vh;
+  margin-top: 47%;
+  margin-left: 66%;
+  border: solid transparent;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 80%;
+  text-align: center;
+  position: fixed;
+}
+#back {
+  width: 5%;
+  height: 5vh;
+  margin-top: 47%;
+  margin-left: 80%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 200%;
+  text-align: center;
+  position: fixed;
+}
+#topspeed {
+  margin-left: -80%;
+  margin-top: 42.5%;
+  font-size: 200%;
+  float: left; 
+}
+#coalconsumption {
+  margin-left: -80%;
+  margin-top: 44.5%;
+  font-size: 200%;
+  float: left; 
+}
+#coalcap {
+  margin-left: -80%;
+  margin-top: 46.5%;
+  font-size: 200%;
+  float: left; 
+}
+#price {
+  margin-left: -80%;
+  margin-top: 48.5%;
+  font-size: 200%;
+  float: left; 
+}
+
+#theimage {
+  width: 50%;
+  height: 50%;
+  margin-top: -28%;
+  margin-left: 5%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  float: left; 
+}
+
+#viewselection { 
+  width: 10%;
+  height: 10vh;
+  margin-top: 10%;
+  margin-left: 10%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+}
+#ownedtrains { 
+  width: 10%;
+  height: 10vh;
+  margin-top: 17%;
+  margin-left: 10%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+}
+#trainkey { 
+  width: 10%;
+  height: 10vh;
+  margin-top: 10%;
+  margin-left: 22%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+
+}
+#mission { 
+  width: 10%;
+  height: 10vh;
+  margin-top: 17%;
+  margin-left: 22%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  position: fixed;
+
+}
+#viewselection2 { 
+  width: 80%;
+  height: 10vh;
+  margin-top: 10%;
+  margin-left: 10%;
+  border: solid transparent;
+  word-wrap:break-word;
+  background: url('img/buttonz.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left; 
+  color: rgb(224, 22, 22);
+  font-size: 150%;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+  background: url('img/toast_bg.png') !important;
+  background-size: 100% 100%!important; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: url('img/bgPanel.png') !important;
+  background-size: 100% 100%!important;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: url('img/buttonv.png') !important;
+  background-size: 100% 100%!important;
+}

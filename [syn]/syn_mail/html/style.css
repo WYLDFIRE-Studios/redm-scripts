@@ -1,0 +1,654 @@
+* {
+    font-family: 'Courier Prime', Courier, monospace;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+    background-color: transparent !important; /* Override any other background color */
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+body {
+    font-family: Courier;
+    overflow: hidden; /* Hide scrollbars */
+}
+#mainContainer {
+    font-family: Courier;
+    background: transparent url('background.png') no-repeat center center fixed; /* 'fixed' keeps it centered */
+    background-size: 60% 75%;
+    color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide scrollbars */
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.0);  /* Black with opacity */
+}
+#appContainer {
+    width: 800px;  /* Set to a fixed width */
+    height: 600px;  /* Set to a fixed height */
+    overflow: hidden;  /* Hide overflow */
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+}
+.pagination {
+    text-align: center;
+}
+.pagination button:focus,
+.pagination input:focus {
+    outline: none;
+    background: none;
+}
+
+.pagination button,
+.pagination input {
+    border: none;
+    background: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+
+.pagination button.bold {
+    font-weight: bold;
+}
+.read-mail {
+    background-color: rgba(255, 255, 255, 0) 
+}
+
+.unread-mail {
+    background-color: rgba(193, 154, 107, 0.5);
+}
+#sendToLabel {
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.0);
+    max-height: calc(2 * 1.1em + 20px); /* Adjust based on your font size and padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling when necessary */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+.active {
+    font-weight: bold;
+}
+#anonymousToggle {
+    margin-left: 10px;
+}
+#recipientName.no-bubble {
+    pointer-events: none;
+}
+
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px; /* Explicit width */
+    height: 310px; /* Explicit height */
+    transform: translate(-50%, -50%);
+    background-color: rgba(228, 201, 153);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1000;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.custom-modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px; /* Set a max-height */
+    overflow-y: auto; /* Enable vertical scroll */
+}
+.small-btn {
+    width: 10px !important;
+    height: 10px !important;
+    font-size: 5px;
+    padding: 1px 1px !important;
+    line-height: 10px;  /* Same as the height */
+    text-align: center;  /* Center horizontally */
+    vertical-align: middle;  /* Center vertically */
+    box-sizing: content-box;
+}
+.po-box-wrapper label {
+    font-weight: bold;
+}
+.po-box-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    font-size: 15px; /* Reduced text size */
+}
+
+.po-box-input {
+    width: 80px;
+    resize: none;
+    overflow: hidden;
+    margin-left: 10px; /* Added padding */
+    margin-right: 2px; /* Added padding */
+}
+
+.address-book-btn {
+    margin-left: 10px;
+    font-size: 12px; /* Reduced text size */
+}
+
+.folder-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Explicit width */
+    height: 220px; /* Explicit height */
+    transform: translate(-50%, -50%);
+    background-color: rgba(228, 201, 153);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1000;
+    overflow-y: hidden;
+    cursor: pointer;
+    text-align: center;
+
+}
+.to-section {
+    max-height: 60px; /* Adjust based on the line-height and font-size */
+    overflow-y: auto; /* Allows vertical scrolling */
+    line-height: 20px; /* Example line-height, adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+    word-break: break-word; /* Optional, for long email addresses */
+}
+.folder-modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100% - 42px);
+    overflow-y: auto; /* Enable vertical scroll */
+}
+.folder-modal h2 {
+    font-size: medium;
+}
+
+.recipient-bubble {
+    position: relative;
+    background-color: #C19A6B;  /* Changed to match the tan color */
+    border-radius: 12px;
+    padding: 5px 20px 5px 5px;  /* Right padding increased to make space for X */
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block; /* To ensure bubbles line up horizontally */
+}
+
+.remove-btn {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background-color: #C19A6B;  /* Changed to a darker tan color */
+    color: white;
+    border: 1px solid white;  /* Added border */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    transform: translateY(-50%);
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent by default */
+}
+
+.recipient-bubble:hover .remove-btn {
+    visibility: visible; /* Make button visible on hover */
+    opacity: 1;
+}
+.contact-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #C19A6B;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #888888;
+    z-index: 1000;
+}
+
+
+
+.contact-item {
+    cursor: pointer;
+    padding: 5px;
+    display: flex;  /* Change to flexbox */
+    align-items: center;  /* Vertically center checkbox and name */
+}
+.contact-item input[type="checkbox"] {
+    margin-right: 10px;  /* Add some margin to separate it from the name */
+}
+
+.contact-item:hover .contact-info {
+    display: block;  /* Shown on hover */
+}
+.anonymous-wrapper {
+    padding-bottom: 1px;  /* Added padding below the anonymous checkbox */
+}
+
+.subject-wrapper {
+    padding-top: 2px;  /* Added padding above the subject input */
+    
+}
+.subject-label {
+    padding-right: 20px;
+}
+#subjectInput {
+    width: 500px;  /* Double the width */
+    resize: none;
+    overflow: hidden;
+}
+#letterContent {
+    width: 100%;
+    height: 200px;  /* Reduced height */
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.0);
+    font-size: 1.1em;
+    border: 1px solid #ccc;  /* A border to make it look like a textarea */
+    overflow: auto;  /* Scroll if content exceeds height */
+    outline: none;
+}
+
+.prompt-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(228, 201, 153);
+    padding: 20px;
+    box-shadow: 0px 0px 10px #888888;
+    z-index: 1000;
+    height: auto;  /* Change from fixed height to auto */
+    max-height: calc(100vh - 50px);  /* Max height based on viewport */
+    overflow-y: hidden;  /* Change to hidden */
+}
+
+.prompt-modal label,
+.prompt-modal input,
+.prompt-modal button {
+    display: block;
+    margin-bottom: 10px;
+}
+/* Address Book Button Styles */
+button.address-book-btn {
+    background: #C19A6B;  /* "Darker tan color" */
+    border: none;
+    color: #3e3e3e;  /* Text color similar to your body text color */
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Courier;  /* Matching the original font */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 30px;
+}
+button.address-book-btn-trash {
+    background-color: #D2B48C;  /* Darker tan color */
+    border: none;
+    color: #3e3e3e;  /* Text color similar to your body text color */
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Courier;  /* Matching the original font */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 30px;
+}
+button.address-book-btn-restore {
+    background-color: #D2B48C;  /* Darker tan color */
+    border: none;
+    color: #3e3e3e;  /* Text color similar to your body text color */
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Courier;  /* Matching the original font */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 30px;
+}
+.folder-modal ul li:hover {
+    font-weight: bold;
+}
+button.address-book-btn:hover {
+    background: #b28e63;  /* Even darker tan color for hover */
+}
+button.address-book-btn-trash:hover {
+    background-color: rgba(207, 75, 63, 1.0);  /* Even darker tan color for hover */
+}
+button.address-book-btn-restore:hover {
+    background-color: rgba(114, 145, 105, 1.0);  /* Even darker tan color for hover */
+}
+p strong {
+    margin-left: 20px;  /* Change the value as needed */
+}
+p  {
+    margin-top: 5px;  /* Change the value as needed */
+    margin-bottom: 5px;  /* Change the value as needed */
+}
+#formContainer {
+    margin-top: 20px; /* Add top margin */
+    margin-left: 20px; /* Add left margin */
+}
+  
+  /* Style individual input fields */
+.inputField label {
+  display: inline-block; /* Makes it possible to set a width */
+  width: 80px; /* Set a fixed width */
+  text-align: left; /* Align text to the right within the given width */
+  margin-right: 10px; /* Add some space between the label and the input */
+  
+}
+  
+  /* Style the text area for notes */
+  #notes {
+    width: 90%; /* Reduce width by 10% */
+    height: 100px; /* Set height */
+    background-color: transparent !important;
+    resize: none;
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px;  /* Increased top padding by 30px */
+    margin-top: -10px; /* Move up by reducing the top margin */
+    padding: 5px 10px 10px;  /* Reduce top padding */
+}
+footer {
+    clear: both;
+    text-align: center;
+    padding: 10px 10px 10px;  /* Increased top padding by 30px */
+    margin-top: 0; /* Remove or reduce top margin to allow #contentContainer more space */
+    /* ... other existing styles */
+}
+header, footer {
+    background-color: rgba(255, 255, 255, 0); /* Reduced alpha value */
+}
+.inbox-container {
+    position: relative;
+    display: inline-block;
+}
+  .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(207, 49, 46, 1.0);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+.mail-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mail-subject {
+    /* Your styles for the subject, if any */
+}
+
+.mail-date {
+    /* Your styles for the date/time, if any */
+    font-size: smaller;
+    color: grey;
+    font-weight: bold;  /* Making the text bold */
+}
+
+button:hover {
+    transform: scale(1.05);  /* Slightly increase size */
+}
+/* Navigation Buttons */
+nav {
+    display: flex;
+    flex-direction: row;  /* Change to row for horizontal alignment */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;  /* Center items vertically */
+    margin: 10px 0 0 0; /* Remove bottom margin */
+}
+#contentContainer {
+    position: relative;
+    max-height: calc(100vh - 10px - 10px - 10px);
+    overflow-y: hidden; /* Allow vertical scroll */
+    overflow-x: hidden; /* Hide horizontal scroll */
+    background-color: rgba(240, 217, 194, 0.0);
+}
+nav button {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+input {
+  outline: none;
+}
+
+#titleContainer h1 {
+    font-family: Courier;
+    font-size: 2em;
+}
+
+#accountContainer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#searchBar {
+    max-width: 100%;  /* Add this line to limit the width */
+    padding: 10px;
+    background-color: rgba(228, 201, 153, 1.0);
+}
+
+#searchInput {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;  /* Remove border */
+    outline: none;  /* Remove focus highlight */
+}
+
+aside {
+    float: left;
+    width: 25%;
+    border-right: 2px solid #3e3e3e;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 600px;
+    box-shadow: 0px 0px 10px #888888;
+}
+#foldersList {
+    max-height: 200px;  /* You can adjust this value based on your needs */
+    overflow-y: auto;
+    list-style: none;
+    cursor: pointer;
+    padding: 2px;
+    font-size: 1.1em;
+}
+#addressBookContainer, #mailFoldersContainer {
+    padding: 10px;
+}
+#contactsList {
+    max-height: 200px; /* Adjust this value based on your needs */
+    overflow-y: auto;
+  }
+#contactsList li, #foldersList li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+#contactsList li:hover, #foldersList li:hover {
+    background: #C19A6B;
+}
+
+main {
+    float: right;
+    width: 75%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: -5px 0px 10px #888888;
+}
+.mail-body {
+    word-wrap: break-word;  /* Break the text onto the next line */
+    overflow-wrap: break-word;  /* Similar to word-wrap, but better support for newer browsers */
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 150px; /* Adjust as needed */
+    margin-left: 20px;  /* Change the value as needed */
+    
+}
+#inbox h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #3e3e3e;
+}
+#mailsList {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 200px; /* Adjust as needed */
+    padding-inline-start: 5px; /* Override the default padding */
+
+}
+.mail-select-checkbox {
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;  /* Adjust this value to move the checkbox down */
+}
+#mailsList li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+#mailsList li:hover {
+    background: #C19A6B;
+}
+
+#mailContent {
+    margin-top: 20px;
+}
+
+#mailActions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* General scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #C19A6B; /* Darker tan color to match button */
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b28e63; /* Even darker tan color for hover to match button */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgba(228, 201, 153, 0.5);
+    border-radius: 4px;
+  }
+  
+  /* Track on active */
+  ::-webkit-scrollbar-thumb:active {
+    background: #C19A6B;
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #D2B48C #f1f1f1;
+  }
+
+
+  /* Add this to your CSS */
+.shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.red-border {
+    border: 2px solid red !important;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+#mailEmojiContainer {
+    position: fixed;
+    bottom: 10px;
+    left: 80px;
+    z-index: 9999;
+    font-size: 2em;
+    cursor: pointer;
+    display: none;
+}
+#unreadMailIndicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    width: 15px;  /* Increased size */
+    height: 15px;  /* Increased size */
+    text-align: center;
+    line-height: 15px;  /* Match line-height with height */
+    border-radius: 50%;
+    font-size: 12px;  /* Smaller font size */
+    z-index: 10000;
+}

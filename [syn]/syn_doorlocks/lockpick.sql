@@ -1,0 +1,1 @@
+ALTER TABLE `doors` ADD COLUMN `breakin` INT(11) NULL DEFAULT 0;

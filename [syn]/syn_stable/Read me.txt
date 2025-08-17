@@ -1,0 +1,99 @@
+Thank you for buying our script ! for more scripts please visit https://discord.gg/6sARP6X3KH
+-------------------------------------------------------------------
+SQL:
+
+Make sure you run the sql
+-------------------------------------------------------------------
+export:
+
+included is a horse item script. inside it is an example on how to make more horse items. 
+
+TriggerEvent('syn:exp', Horse , Number to increase horse exp) 
+this export can be added to any of your existing horse items to increase horse exp 
+an example of how this works would be like this 
+
+local horse = GetMount(PlayerPedId()) -- this gets the horse the player is riding 
+local exp = 5 -- increase the exp by 5 
+TriggerEvent('syn:exp', Horse , exp) 
+
+-------------------------------------------------------------------
+
+in the config you can change all the language ! no need to edit client at all, meaning if i make updates and i dont mention
+the config u would not need to change the config at all thus saving all your language changes.
+
+Stable shop is written in HTML and JAVA meaning you have to edit its language in those files. it is very unlikely that 
+i will update this html meaning once you set your language u wouldnt have to replace those files on update unless i mention it !
+be very careful when editing the language on those files and always make sure u have a backup ! a small mistake could break it.
+
+-------------------------------------------------------------------
+Horse Trainers:
+
+in config there is an option for the horse trainer job. it is set as horsetrainer by default. if a player has this job
+in the database all actions that increase the horse exp increase it by double the value. 
+
+in the config you can set the amount of horses a trainer can have in their stable. this means horse trainers can have more horse slots than the normal players
+-------------------------------------------------------------------
+Stable Slots:
+
+You can set the stable slots allowed for players in the config you can set horse slots and wagon slots
+
+you can also set a seperate slot limit for players with the horse trainer job 
+
+-------------------------------------------------------------------
+Horse levels: 
+
+horses level up when a player interacts with them by leading them, riding them or using items with the above mentioned trigger. 
+
+the horse items script i included already has those triggers set up so if you are running it and you use one of the items mentioned in it the exp will increase based 
+on the value you set in it. 
+
+horse trainers gain double the exp for the horses they interact with. 
+
+horse training level is consistent and works no matter the rider of the horse. 
+
+horse levels are a total of 4 just like the base game 
+
+level 1 is the normal level all horses are spawned naturally in (untrained)
+
+level2 allows you to do the rear trick by holding ALT button then pressing Space. if the horse is yours it will do the trick otherwise it will throw you
+if your horse is less than level 2 and you try this trick the horse will buck you. 
+
+level3 allows you to do the drift trick when riding hold CTRL and press space bar and you will drift. 
+
+level4 allows you to make your horse dance by holding the space button either while standing still or moving. you can move the horse left and right as it dances 
+
+horse levels also allow you to do some horse tricks using /commands
+
+you can change these commands in the config as you like just make sure u write them as a command is written with no space. 
+
+/horserest and /horsesleep work with level 2. they make the horse sit or sleep. these commands wont work if you are too close to your horse as it will stand up 
+/horsedrink works with level 3 and it will allow your horse to drink water from a river and recover some stamina core. this command will only work if the horse is in water
+/horsewallow is a cute trick your horse can do at level 4 
+-------------------------------------------------------------------
+Stables:
+in the horse shop you can buy horses or wagons using gold or cash. 
+you can rotate horses to see them better
+horse tack items are free since they are just cosmatic 
+you can look at all your horses and select your active horse here
+-------------------------------------------------------------------
+Horse/Wagon interactions:
+
+H calls your horse, J calls your wagon. you can set the distance which the horse or wagon will spawn from the player in the config. 
+
+pressing U near your horse or wagon will give you a menu where you can interact with the horse. you can see its name, open the inventory, dismiss it,
+ or give its ownership to another player,
+
+giving your horse or wagon ownership away to another player means that player owns them. this only works if the other player has empty slots in their stable. 
+-------------------------------------------------------------------
+
+Horse/Wagon inventory:
+
+the horse/wagon inventory works for weapons,items. 
+you can set the limit of item count the player can have in their horse/wagon inventory in the config. 
+-------------------------------------------------------------------
+
+
+thank you for reading 
+
+
+
